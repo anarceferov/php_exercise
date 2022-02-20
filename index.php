@@ -1,5 +1,6 @@
 <?php
-namespace index;
+
+include $_SERVER['DOCUMENT_ROOT'].'/example/vendor/autoload.php';
 
 declare(ticks=1);
 error_reporting(E_ALL);
@@ -281,7 +282,7 @@ echo test::ok(5)->first(4)->second(9)->get_class().'<br>';
 $uuid = uniqid();
 if(!isset($_COOKIE['basket']))
 {
-    setcookie(name:'basket' , value:$uuid , expires:time()+10 , httponly:httponly);
+    // setcookie(name:'basket' , value:$uuid , expires:time()+10 , httponly:httponly);
 
 }
 echo $_COOKIE['basket'].'<br>';
